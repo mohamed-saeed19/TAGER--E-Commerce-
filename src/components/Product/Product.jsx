@@ -8,9 +8,8 @@ export default function Product() {
   const [Products, setProducts] = useState([]);
   async function getProducts() {
     let { data } = await axios.get(`${BaseUrl}/products`);
-    console.log(data);
     setProducts(data.data);
-  }
+  } 
   useEffect(() => {
     getProducts();
   }, []);
@@ -20,9 +19,9 @@ export default function Product() {
         <div className="row">
           {Products.map((item) => {
             return (
-              <div key={item._id} className="col-md-2">
+              <div key={item._id} className="col-md-3">
                 <div className="product">
-                  <Link to='/Product-details' className="link">
+                  <Link to={'/Product-details/'+item._id} className="link">
                   <img src={item.imageCover} className=" w-100 mt-3" />
                   <h6 className=" text-main mt-4"> {item.category.name}</h6>
                   <p className=" fw-bolder">

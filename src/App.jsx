@@ -6,6 +6,8 @@ import Layout from "./components/Layout/Layout";
 import HomePage from "./MainPages/HomePage";
 import Product from "./components/Product/Product";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Login from "./components/Auth/Login/Login";
+import Register from "./components/Auth/Register/Register";
 
 function App() {
   let routes = createBrowserRouter([
@@ -15,7 +17,9 @@ function App() {
       children: [
         { index: true, element: <HomePage /> },
         { path: 'Product', element: <Product /> },
-        { path: 'Product-details', element: <ProductDetails /> },
+        { path: 'Product-details/:id', element: <ProductDetails /> },
+        { path: 'login', element:<Login/>},
+        { path: 'register', element:<Register/>},
       ],
     },
   ]);

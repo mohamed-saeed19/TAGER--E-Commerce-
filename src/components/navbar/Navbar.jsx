@@ -34,11 +34,14 @@ export default function Navbar() {
             <i className="fa-solid fa-cart-shopping"></i>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">9</span></NavLink>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a className="nav-link" to="/">Logout</a>
+        </li> */}
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/register">Register</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" to="/">Login</a>
+          <NavLink className="nav-link" to="/login">Login</NavLink>
         </li>
         
       </ul>

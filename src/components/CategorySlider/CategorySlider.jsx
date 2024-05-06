@@ -8,7 +8,6 @@ export default function CategorySlider() {
 const [category, setCategory] = useState([])
 async function getCategorySlider(){
 let{data}=await  axios.get(`${BaseUrl}/categories`)
-console.log(data)
 setCategory(data.data)
 }
   useEffect(() => {
